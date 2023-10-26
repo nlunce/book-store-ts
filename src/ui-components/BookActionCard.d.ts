@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { BookActionCard } from "../API.ts";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ButtonProps, FlexProps, ImageProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -19,6 +20,8 @@ export declare type BookActionCardOverridesProps = {
     Button?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type BookActionCardProps = React.PropsWithChildren<Partial<FlexProps> & {
+    prop?: BookActionCard;
+} & {
     overrides?: BookActionCardOverridesProps | undefined | null;
 }>;
 export default function BookActionCard(props: BookActionCardProps): React.ReactElement;

@@ -16,7 +16,7 @@ import {
   Text,
 } from "@aws-amplify/ui-react";
 export default function ProductDetail(props) {
-  const { overrides, ...rest } = props;
+  const { prop, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -85,6 +85,7 @@ export default function ProductDetail(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               objectFit="cover"
+              src={prop?.bookCover}
               {...getOverrideProps(overrides, "image")}
             ></Image>
             <Flex
@@ -132,7 +133,7 @@ export default function ProductDetail(props) {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children="Title"
+                  children={prop?.title}
                   {...getOverrideProps(overrides, "Title29766955")}
                 ></Text>
                 <Text
@@ -155,7 +156,7 @@ export default function ProductDetail(props) {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat."
+                  children={prop?.description}
                   {...getOverrideProps(
                     overrides,
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat."
@@ -226,7 +227,7 @@ export default function ProductDetail(props) {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children="ISBN -  1283189237891723"
+                  children={`${"ISBN10 - "}${prop?.isbn10}`}
                   {...getOverrideProps(overrides, "ISBN - 1283189237891723")}
                 ></Text>
               </Flex>
@@ -294,7 +295,7 @@ export default function ProductDetail(props) {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children="author 1&#xA;author 2&#xA;author 3&#xA;author 4"
+                  children={prop?.author}
                   {...getOverrideProps(
                     overrides,
                     "author 1 author 2 author 3 author 4"
@@ -334,7 +335,7 @@ export default function ProductDetail(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Title"
+              children={prop?.title}
               {...getOverrideProps(overrides, "Title29766967")}
             ></Text>
             <Text
@@ -355,7 +356,7 @@ export default function ProductDetail(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="$192"
+              children={`${"$"}${prop?.price}`}
               {...getOverrideProps(overrides, "$192")}
             ></Text>
             <Flex

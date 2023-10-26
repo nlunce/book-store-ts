@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function BookActionCard(props) {
-  const { overrides, ...rest } = props;
+  const { prop, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -37,6 +37,7 @@ export default function BookActionCard(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         objectFit="cover"
+        src={prop?.bookCover}
         {...getOverrideProps(overrides, "image")}
       ></Image>
       <Flex
@@ -85,7 +86,7 @@ export default function BookActionCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Title"
+            children={prop?.title}
             {...getOverrideProps(overrides, "Title")}
           ></Text>
           <Text
@@ -108,7 +109,7 @@ export default function BookActionCard(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Author(s)"
+            children={prop?.author}
             {...getOverrideProps(overrides, "Author(s)")}
           ></Text>
         </Flex>
@@ -131,7 +132,7 @@ export default function BookActionCard(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="$99 USD"
+          children={`${"$"}${prop?.price}`}
           {...getOverrideProps(overrides, "$99 USD")}
         ></Text>
         <Button

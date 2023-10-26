@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { BookActionCard } from "../API.ts";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ButtonProps, DividerProps, FlexProps, ImageProps, RatingProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -41,6 +42,8 @@ export declare type ProductDetailOverridesProps = {
     Button29766972?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type ProductDetailProps = React.PropsWithChildren<Partial<FlexProps> & {
+    prop?: BookActionCard;
+} & {
     overrides?: ProductDetailOverridesProps | undefined | null;
 }>;
 export default function ProductDetail(props: ProductDetailProps): React.ReactElement;

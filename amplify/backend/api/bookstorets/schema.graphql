@@ -1,0 +1,10 @@
+type BookActionCard @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  author: [String!]
+  description: String!
+  bookCover: String!
+  price: Float!
+  isbn10: String!
+  available: Boolean!
+}
