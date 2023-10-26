@@ -13,6 +13,8 @@ import {
 
 import { LogoComponent } from "../images";
 
+import { AuthenticatorModal } from "../modals";
+
 const BrowseBooksUnauthenticated: React.FC = () => {
   const [activeContent, setActiveContent] = useState(0);
   const [book, setBook] = useState();
@@ -115,6 +117,16 @@ const BrowseBooksUnauthenticated: React.FC = () => {
           )
         }
       />
+      {(activeContent === 8 || activeContent === 9) && (
+        <>
+          <AuthenticatorModal
+            overlayFunctionality={() => {
+              setActiveContent(0);
+            }}
+            initialState={activeContent === 9 ? "signUp" : undefined}
+          />
+        </>
+      )}
     </>
   );
 };
