@@ -11,7 +11,7 @@ import {
   footerOverrides,
 } from "../stylingOverrides.js";
 
-import LogoComponent from "../images/LogoComponent.js";
+import { LogoComponent } from "../images";
 
 const BrowseBooksUnauthenticated: React.FC = () => {
   const [activeContent, setActiveContent] = useState(0);
