@@ -42,7 +42,7 @@ export declare type ProductDetailOverridesProps = {
     Button29766972?: PrimitiveOverrideProps<ButtonProps>;
 } & EscapeHatchProps;
 export declare type ProductDetailProps = React.PropsWithChildren<Partial<FlexProps> & {
-    prop?: BookActionCard;
+    book?: BookActionCard;
 } & {
     overrides?: ProductDetailOverridesProps | undefined | null;
 }>;

@@ -16,7 +16,7 @@ import {
   Text,
 } from "@aws-amplify/ui-react";
 export default function ProductDetail(props) {
-  const { prop, overrides, ...rest } = props;
+  const { book, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -85,7 +85,7 @@ export default function ProductDetail(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               objectFit="cover"
-              src={prop?.bookCover}
+              src={book?.bookCover}
               {...getOverrideProps(overrides, "image")}
             ></Image>
             <Flex
@@ -133,7 +133,7 @@ export default function ProductDetail(props) {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children={prop?.title}
+                  children={book?.title}
                   {...getOverrideProps(overrides, "Title29766955")}
                 ></Text>
                 <Text
@@ -156,7 +156,7 @@ export default function ProductDetail(props) {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children={prop?.description}
+                  children={book?.description}
                   {...getOverrideProps(
                     overrides,
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat."
@@ -227,7 +227,7 @@ export default function ProductDetail(props) {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children={`${"ISBN10 - "}${prop?.isbn10}`}
+                  children={`${"ISBN10 - "}${book?.isbn10}`}
                   {...getOverrideProps(overrides, "ISBN - 1283189237891723")}
                 ></Text>
               </Flex>
@@ -295,7 +295,7 @@ export default function ProductDetail(props) {
                   position="relative"
                   padding="0px 0px 0px 0px"
                   whiteSpace="pre-wrap"
-                  children={prop?.author}
+                  children={book?.author}
                   {...getOverrideProps(
                     overrides,
                     "author 1 author 2 author 3 author 4"
@@ -335,7 +335,7 @@ export default function ProductDetail(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children={prop?.title}
+              children={book?.title}
               {...getOverrideProps(overrides, "Title29766967")}
             ></Text>
             <Text
@@ -356,7 +356,7 @@ export default function ProductDetail(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children={`${"$"}${prop?.price}`}
+              children={`${"$"}${book?.price}`}
               {...getOverrideProps(overrides, "$192")}
             ></Text>
             <Flex
