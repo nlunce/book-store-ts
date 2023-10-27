@@ -7,71 +7,86 @@ import {
 } from "../ui-components";
 
 import {
-  navbarOverrides as navbarOverridesImported,
+  navbarAuthenticatedOverrides as navbarAuthenticatedOverridesImported,
   footerOverrides,
 } from "../stylingOverrides.js";
 
 import { LogoComponent } from "../images";
+import { ContactUsModal, RedeemCodeModal } from "../modals";
 
 const BrowseBooksAuthenticated: React.FC = () => {
   const [activeContent, setActiveContent] = useState(0);
   const [book, setBook] = useState();
   const [showBookCollection, setShowBookCollection] = useState(true);
 
-  const browseBooksOverrides = {
-    BrowseBooksPage: {
+  const browseBooksAuthOverrides = {
+    BrowseBooksPageAuthenticated: {
       width: "100%",
     },
-    Navbar: {
-      overrides: {
-        ...navbarOverridesImported,
 
+    // Overrides for the authenticated Navbar component.
+    NavbarAuthenticated: {
+      overrides: {
+        ...navbarAuthenticatedOverridesImported,
         Home: {
-          ...navbarOverridesImported["Home"],
+          // Define behavior for the "Home" button in the Navbar.
+          ...navbarAuthenticatedOverridesImported["Home"],
           onClick: () => {
             setActiveContent(0);
             setShowBookCollection(true);
           },
         },
+
         Books: {
-          ...navbarOverridesImported["Books"],
+          // Define behavior for the "Books" button in the Navbar.
+          ...navbarAuthenticatedOverridesImported["Books"],
           onClick: () => {
             setActiveContent(0);
             setShowBookCollection(true);
           },
         },
+
         "Contact us": {
-          ...navbarOverridesImported["Contact us"],
+          // Define behavior for the "Contact us" button in the Navbar.
+          ...navbarAuthenticatedOverridesImported["Contact us"],
           onClick: () => {
             setActiveContent(4);
           },
         },
-        Button39493466: {
+
+        "Redeem Code": {
+          // Define behavior for the "Redeem Code" button in the Navbar.
+          ...navbarAuthenticatedOverridesImported["Redeem Code"],
           onClick: () => {
-            setActiveContent(8);
+            setActiveContent(3);
           },
         },
-        Button39493467: {
+
+        "Your Books": {
+          // Define behavior for the "Your Books" button in the Navbar.
+          ...navbarAuthenticatedOverridesImported["Your Books"],
           onClick: () => {
-            setActiveContent(9);
+            setActiveContent(5);
           },
         },
       },
       logoSlot: <LogoComponent />,
     },
 
+    // Overrides for the Footer component.
     Footer: { overrides: footerOverrides },
   };
 
   return (
     <>
       <BrowseBooksAuth
-        overrides={browseBooksOverrides}
+        overrides={browseBooksAuthOverrides}
         bookCollectionSlot={
           showBookCollection ? (
             <BookActionCardCollection
               overrideItems={({ item, index }) => ({
                 overrides: {
+                  // Define behavior for other elements in the book collection.
                   image: {
                     style: { cursor: "pointer" },
                     onClick: () => {
@@ -96,6 +111,7 @@ const BrowseBooksAuthenticated: React.FC = () => {
             />
           ) : (
             <>
+              {/* Render a close bar and book details when a specific book is selected. */}
               <CloseBar
                 width={"100%"}
                 height={"50px"}
@@ -115,6 +131,28 @@ const BrowseBooksAuthenticated: React.FC = () => {
           )
         }
       />
+
+      {/* Render the RedeemCodeModal when activeContent is 3. */}
+      {activeContent === 3 && (
+        <>
+          <RedeemCodeModal
+            overlayFunctionality={() => {
+              setActiveContent(0);
+            }}
+          />
+        </>
+      )}
+
+      {/* Render the ContactUsModal when activeContent is 4. */}
+      {activeContent === 4 && (
+        <>
+          <ContactUsModal
+            overlayFunctionality={() => {
+              setActiveContent(0);
+            }}
+          />
+        </>
+      )}
     </>
   );
 };

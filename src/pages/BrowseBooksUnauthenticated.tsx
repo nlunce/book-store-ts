@@ -13,7 +13,7 @@ import {
 
 import { LogoComponent } from "../images";
 
-import { AuthenticatorModal } from "../modals";
+import { AuthenticatorModal, ContactUsModal } from "../modals";
 
 const BrowseBooksUnauthenticated: React.FC = () => {
   const [activeContent, setActiveContent] = useState(0);
@@ -117,6 +117,17 @@ const BrowseBooksUnauthenticated: React.FC = () => {
           )
         }
       />
+
+      {activeContent === 4 && (
+        <>
+          <ContactUsModal
+            overlayFunctionality={() => {
+              setActiveContent(0);
+            }}
+          />
+        </>
+      )}
+
       {(activeContent === 8 || activeContent === 9) && (
         <>
           <AuthenticatorModal

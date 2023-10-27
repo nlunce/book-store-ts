@@ -8,12 +8,14 @@
 import * as React from "react";
 import {
   getOverrideProps,
+  useAuth,
   useAuthSignOutAction,
 } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Text, View } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 export default function NavbarAuthenticated(props) {
   const { logoSlot, overrides, ...rest } = props;
+  const authAttributes = useAuth().user?.attributes ?? {};
   const buttonOnClick = useAuthSignOutAction({ global: false });
   return (
     <Flex
@@ -220,7 +222,7 @@ export default function NavbarAuthenticated(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="user"
+          children={authAttributes["name"]}
           {...getOverrideProps(overrides, "User")}
         ></Text>
       </Flex>

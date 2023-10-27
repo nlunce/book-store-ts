@@ -1,4 +1,4 @@
-type BookActionCard @model @auth(rules: [{allow: public}]) {
+type BookActionCard @model @auth(rules: [{allow: public}, {allow: private, operations: [read]}]) {
   id: ID!
   title: String!
   author: [String!]
@@ -8,3 +8,4 @@ type BookActionCard @model @auth(rules: [{allow: public}]) {
   isbn10: String!
   available: Boolean!
 }
+ 
