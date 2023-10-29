@@ -1,22 +1,57 @@
 {
   "compilerOptions": {
+    // Set the target JavaScript version to ES5, ensuring compatibility with older browsers.
     "target": "es5",
+
+    // Include necessary libraries and APIs for DOM manipulation and iteration.
     "lib": ["dom", "dom.iterable", "esnext"],
+
+    // Allow the use of JavaScript files (JS) within the TypeScript project.
     "allowJs": true,
+
+    // Skip type checking of declaration files (*.d.ts) to speed up compilation.
     "skipLibCheck": true,
+
+    // Enable compatibility with ES modules and CommonJS modules.
     "esModuleInterop": true,
+
+    // Allow importing using synthetic default imports for compatibility.
     "allowSyntheticDefaultImports": true,
+
+    // Enable strict type checking for enhanced type safety.
     "strict": true,
+
+    // Enforce consistent casing in file names to avoid issues on case-sensitive file systems.
     "forceConsistentCasingInFileNames": true,
+
+    // Require explicit handling of all cases in switch statements to catch potential bugs.
     "noFallthroughCasesInSwitch": true,
+
+    // Specify the module system as ES modules (ESNext) for modern development.
     "module": "esnext",
+
+    // Resolve modules using Node.js resolution strategy.
     "moduleResolution": "node",
+
+    // Allow importing JSON files as modules.
     "resolveJsonModule": true,
+
+    // Enable isolatedModules mode for faster, single-file transpilation (isolated output per file).
     "isolatedModules": true,
+
+    // Do not emit compiled output files (e.g., JavaScript files).
     "noEmit": true,
+
+    // Prevent the generation of output files when there are compilation errors.
     "noEmitOnError": true,
+
+    // Specify JSX syntax to be "react-jsx" for React development.
     "jsx": "react-jsx",
+
+    // Generate source maps for improved debugging and error tracing.
     "sourceMap": true
   },
+
+  // Specify which files and directories should be included in the compilation.
   "include": ["src"]
 }
