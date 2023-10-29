@@ -34,6 +34,7 @@ During the development of this project, I used the following tools and technolog
 
 Throughout the project, I found the following websites to be helpful in gaining knowledge, troubleshooting issues, and improving my development skills:
 
+- [Understanding TypeScript - Udemy Course](https://www.udemy.com/course/understanding-typescript/?kw=understanding&src=sac): Understand what TypeScript really is about and how it works
 - [MDN Web Docs](https://developer.mozilla.org): A comprehensive resource for web development documentation and tutorials.
 - [Stack Overflow](https://stackoverflow.com): A valuable community where I found answers to various technical questions.
 - [Amazon Cognito user pools Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) Documentation for AWS Cognito Pool
