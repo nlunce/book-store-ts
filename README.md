@@ -20,6 +20,7 @@ During the development of this project, I used the following tools and technolog
   - HTML, CSS, and JavaScript
   - [React](https://reactjs.org) for building the user interface
   - [AWS Amplify](https://aws.amazon.com/amplify/?trk=66d9071f-eec2-471d-9fc0-c374dbda114d&sc_channel=ps&ef_id=CjwKCAjw-KipBhBtEiwAWjgwrNSJe-7Rj_Kg5-4I1S6F0KLUUX50YWUElmeBu0hZU071Dk37bE7hmBoCV0sQAvD_BwE:G:s&s_kwcid=AL!4422!3!646025317188!e!!g!!aws%20amplify!19610918335!148058249160) for styling and layout
+  - [Figma](https://www.figma.com/) for styling and layout
 - Back-end:
   - [Node.js](https://nodejs.org) for server-side development
   - [Amazon S3](https://aws.amazon.com/pm/serv-s3/?trk=fecf68c9-3874-4ae2-a7ed-72b6d19c8034&sc_channel=ps&ef_id=CjwKCAjw-KipBhBtEiwAWjgwrI7clH1M5JXGpF_a-unGP1w8cuNrynKj_n-C7YHL_o44XOCbEsaOJxoCppIQAvD_BwE:G:s&s_kwcid=AL!4422!3!536455709177!e!!g!!amazon%20s3%20cloud%20backup!11204620052!112938566634) for object storage
