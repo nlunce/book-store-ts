@@ -1,26 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { Amplify, Auth } from "aws-amplify";
 import awsExports from "./aws-exports";
-
 import "./App.css";
-
 import { BrowseBooksUnauthenticated, BrowseBooksAuthenticated } from "./pages";
+
+import getUser from "./authUtil";
+import { CognitoUser } from "amazon-cognito-identity-js";
 
 Amplify.configure(awsExports);
 
 const App: React.FC = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<CognitoUser | null>(null);
 
   useEffect(() => {
-    Auth.currentAuthenticatedUser()
-      .then((user) => {
-        setUser(user);
-        console.log(user);
-      })
-      .catch((error) => {
+    async function fetchData() {
+      try {
+        const fetchedUser = await getUser();
+        setUser(fetchedUser);
+      } catch (error) {
+        console.error("Error fetching user:", error);
         setUser(null);
-        console.log(error);
-      });
+      }
+    }
+
+    fetchData();
   }, []);
 
   return (
