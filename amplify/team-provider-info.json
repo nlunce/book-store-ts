@@ -16,7 +16,10 @@
         "bookstorets": {}
       },
       "function": {
-        "bookstoreLambda": {}
+        "bookstoreLambda": {
+          "deploymentBucketName": "amplify-bookstorets-staging-230118-deployment",
+          "s3Key": "amplify-builds/bookstoreLambda-34484c6233374743346e-build.zip"
+        }
       }
     }
   }

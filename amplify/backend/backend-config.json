@@ -92,5 +92,23 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "parameters": {
+    "AMPLIFY_function_bookstoreLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bookstoreLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_bookstoreLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bookstoreLambda"
+        }
+      ]
+    }
   }
 }
