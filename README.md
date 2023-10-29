@@ -10,7 +10,7 @@ I developed an online book store by utilizing a tech stack that includes JavaScr
 
 The primary purpose behind creating this software is to establish a user-centric and efficient online marketplace for books. Through this platform, users can browse an extensive catalog of books, access detailed information about each title, and make purchases as per their preferences.
 
-[Software Demo Video](https://youtu.be/zmQgXKHEUbI)
+[Software Demo Video](https://youtu.be/SqWMdhQnLvE)
 
 # Development Environment
 
