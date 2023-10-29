@@ -1,46 +1,50 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In my pursuit of continuous learning as a software engineer, I have developed a software project with the aim of enhancing my skills and knowledge. The software I've created serves as a practical application of what I've learned and showcases my ability to build a functional system.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+I developed an online book store by utilizing a tech stack that includes JavaScript, React, AWS Amplify, DynamoDB, and S3. This software serves as a comprehensive digital platform designed to offer a seamless and user-friendly experience for both book enthusiasts and potential buyers.
 
-### `npm start`
+## Purpose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The primary purpose behind creating this software is to establish a user-centric and efficient online marketplace for books. Through this platform, users can browse an extensive catalog of books, access detailed information about each title, and make purchases as per their preferences.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Software Demo Video](https://youtu.be/zmQgXKHEUbI)
 
-### `npm test`
+# Development Environment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+During the development of this project, I used the following tools and technologies:
 
-### `npm run build`
+- Front-end:
+  - HTML, CSS, and JavaScript
+  - [React](https://reactjs.org) for building the user interface
+  - [AWS Amplify](https://aws.amazon.com/amplify/?trk=66d9071f-eec2-471d-9fc0-c374dbda114d&sc_channel=ps&ef_id=CjwKCAjw-KipBhBtEiwAWjgwrNSJe-7Rj_Kg5-4I1S6F0KLUUX50YWUElmeBu0hZU071Dk37bE7hmBoCV0sQAvD_BwE:G:s&s_kwcid=AL!4422!3!646025317188!e!!g!!aws%20amplify!19610918335!148058249160) for styling and layout
+  - [Figma](https://www.figma.com/) for styling and layout
+- Back-end:
+  - [Node.js](https://nodejs.org) for server-side development
+  - [Amazon S3](https://aws.amazon.com/pm/serv-s3/?trk=fecf68c9-3874-4ae2-a7ed-72b6d19c8034&sc_channel=ps&ef_id=CjwKCAjw-KipBhBtEiwAWjgwrI7clH1M5JXGpF_a-unGP1w8cuNrynKj_n-C7YHL_o44XOCbEsaOJxoCppIQAvD_BwE:G:s&s_kwcid=AL!4422!3!536455709177!e!!g!!amazon%20s3%20cloud%20backup!11204620052!112938566634) for object storage
+  - [DynamoDB](https://aws.amazon.com/dynamodb/) for relational storage
+- Authentication:
+  - [Amazon Cognito user pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) for user authentication
+- Version Control:
+  - [Git](https://git-scm.com) for source code management
+  - [GitHub](https://github.com) for remote repository hosting
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Useful Websites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Throughout the project, I found the following websites to be helpful in gaining knowledge, troubleshooting issues, and improving my development skills:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Understanding TypeScript - Udemy Course](https://www.udemy.com/course/understanding-typescript/?kw=understanding&src=sac): Understand what TypeScript really is about and how it works
+- [MDN Web Docs](https://developer.mozilla.org): A comprehensive resource for web development documentation and tutorials.
+- [Stack Overflow](https://stackoverflow.com): A valuable community where I found answers to various technical questions.
+- [Amazon Cognito user pools Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html) Documentation for AWS Cognito Pool
+- [DynamoDB Documentation](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html): Documentation and tutorials on DynamoDB, assisting in database setup and management.
+- [AWS Amplify Documentation](https://docs.aws.amazon.com/amplify/): Documentation and tutorials on AWS Amplify, assisting in frontend setup and management.
+- [AWS S3](https://docs.aws.amazon.com/s3/): Documentation and tutorials on Amazon Simple Storage Service Documentation, assisting in object database setup and management.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
